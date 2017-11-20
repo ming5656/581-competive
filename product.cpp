@@ -42,25 +42,9 @@ ll dp(int n)
             d.times = product[j].times;
             if(d.value==0)
                 continue;
-            else if(buffer.size()==0)
-            {
-                buffer.push_back(d);
-            }
             else
             {
-                it = lower_bound(buffer.begin(),buffer.end(),d);
-                if(it->value==d.value)
-                {
-                    it->times+=d.times;
-                }
-                else if(it==buffer.end())
-                {
-                    buffer.push_back(d);
-                }
-                else
-                {
-                    buffer.insert(it,d);
-                }
+                buffer.push_back(d);
             }
         }
         for(int j=0;j<buffer.size();j++)
