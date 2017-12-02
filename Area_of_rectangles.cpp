@@ -1,3 +1,5 @@
+// O(n^2) 
+//TLE
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
